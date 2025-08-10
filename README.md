@@ -41,7 +41,6 @@ Clone this repository:
 ```
 ai-academic-text-detector/
 ├── code/               # Python scripts and Colab notebooks
-├── data/               # Dataset references (see data/README.md)
 ├── results/            # Model outputs and visualizations
 ├── README.md           # Project documentation
 └── LICENSE             # MIT License file
