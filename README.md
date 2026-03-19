@@ -1,52 +1,40 @@
-# AI-Generated Academic Text Detection
+<h1>🧠 Detecting Machine‑Generated Academic Text Using Supervised Learning</h1>
 
-## Overview  
-A supervised learning system to detect machine-generated academic essays using:
-- Datasets (Kaggle LLM Detect (academic essays) + OpenAI GPT-2 (cross-domain))  
-- Stylometric features (Logistic Regression/SVM)  
-- Transformer models (BERT/RoBERTa)  
-- Perplexity analysis with GPT-2
+<h2>🎯 Project Overview</h2>
+This project investigates whether supervised machine‑learning models can reliably detect AI‑generated academic essays, addressing a growing challenge in academic integrity. Using stylometric features and transformer‑based models, the study evaluates how effectively different classifiers distinguish between human‑written and machine‑generated text.
 
-## Dataset References
+The project compares:
+- <b>Stylometric models (Logistic Regression, SVM)</b>
+- <b>Transformer models (BERT, RoBERTa)</b>
+- <b>A perplexity‑based GPT‑2 baseline</b>
+- <b>Cross‑domain generalisation using GPT‑2 web text</b>
 
-This folder originally contained processed data from:
+<h2>🛠 Languages & Libraries</h2>
+- Python (scikit‑learn, spaCy, NLTK, TextStat, PyTorch, HuggingFace Transformers)
 
-1. **Kaggle LLM Detect AI Text Dataset**  
-   - Source: [Download here](https://www.kaggle.com/datasets/surajiha101/llm-detect-ai-generated-text-dataset)  
-   - Files: `Training_Essay_Data.csv` (preprocessed)  
-   - Citation:  
-     ```bibtex
-     @misc
-     {
-     thite2023llmdetect,
-     author = {Thite, Suraj},
-     title = {LLM Detect AI Generated Text Dataset},
-     year = {2023},
-     publisher = {Kaggle}
-     }
-     ```
+<h2>Environments Used </h2>
+- Jupyter Notebook
 
-2. **GPT-2 Output Dataset**  
-   - Source: [GitHub](https://github.com/openai/gpt-2-output-dataset)  
-   - Files: `webtext.test.jsonl`, `small-117M.test.jsonl`  
-   - License: [MIT](https://github.com/openai/gpt-2-output-dataset/blob/master/LICENSE)
+<h2>📊 Datasets Used</h2>
+- Kaggle LLM Detect AI Text Dataset
+- GPT‑2 Output Dataset
 
-## Setup  
-Clone this repository:  
-   ```bash
-   git clone https://github.com/Askahid66/ai-academic-text-detector.git
-```
+<h2>Key Findings</h2>
+✔ <b>RoBERTa achieved the best overall performance</b>b>
+ 
+ - Highest accuracy
+ - Highest macro F1
+ - Strongest ROC‑AUC
+ - Most balanced confusion matrix
 
-## Repository Structure
-```
-ai-academic-text-detector/
-├── code/               # Python scripts and Colab notebooks
-├── results/            # Model outputs and visualizations
-├── README.md           # Project documentation
-└── LICENSE             # MIT License file
-```
+✔ <b>Stylometric models performed surprisingly well</b>
+ - Logistic Regression and SVM captured meaningful writing‑style differences
+ - Useful for interpretable, lightweight detection systems
 
-## License  
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for full details.  
+✔ <b>GPT‑2 perplexity is a weak but informative baseline</b>
+ - Works for short texts
+ - Struggles with long academic essays
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+✔ <b>Cross‑domain performance drops significantly</b>
+ - Models trained on academic essays struggle with informal web text
+ - Highlights domain‑specific writing patterns
